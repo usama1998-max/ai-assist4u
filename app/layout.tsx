@@ -4,8 +4,7 @@ import type { AppProps } from 'next/app';
 import { ChakraProvider, Box, Portal, useDisclosure } from '@chakra-ui/react';
 import theme from '@/theme/theme';
 import routes from '@/routes';
-import Sidebar from '@/components/sidebar/Sidebar';
-import Footer from '@/components/footer/FooterAdmin';
+import Sidebar from '@/components/sidebar/Sidebar'; 
 import Navbar from '@/components/navbar/NavbarAdmin';
 import { getActiveRoute, getActiveNavbar } from '@/utils/navigation';
 import { usePathname } from 'next/navigation';
@@ -58,7 +57,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
                     <Navbar
                       setApiKey={setApiKey}
                       onOpen={onOpen}
-                      logoText={'Horizon UI Dashboard PRO'}
+                      logoText={' Dashboard PRO'}
                       brandText={getActiveRoute(routes, pathname)}
                       secondary={getActiveNavbar(routes, pathname)}
                     />
@@ -74,9 +73,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
                   {children}
                   {/* <Component apiKeyApp={apiKey} {...pageProps} /> */}
                 </Box>
-                <Box>
-                  <Footer />
-                </Box>
+                
               </Box>
             </Box>
           )}
