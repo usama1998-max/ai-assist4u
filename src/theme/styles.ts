@@ -105,4 +105,8 @@ export const globalStyles = {
       },
     }),
   },
+  config: {
+    initialColorMode: 'dark', // Set default color mode to dark
+    useSystemColorMode: false, // Optionally, disable system color mode switching
+  },
 };
