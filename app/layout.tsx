@@ -40,7 +40,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
               <Box
                 pt={{ base: '60px', md: '100px' }}
                 float="right"
-                minHeight="100vh"
+                // minHeight="100vh"
                 height="100%"
                 overflow="auto"
                 position="relative"
@@ -66,9 +66,9 @@ export default function RootLayout({ children }: { children: ReactNode }) {
                 <Box
                   mx="auto"
                   p={{ base: '20px', md: '30px' }}
-                  pe="20px"
-                  minH="100vh"
-                  pt="50px"
+                  // pe="20px"
+                  // minH="100vh"
+                  // pt="50px"
                 >
                   {children}
                   {/* <Component apiKeyApp={apiKey} {...pageProps} /> */}

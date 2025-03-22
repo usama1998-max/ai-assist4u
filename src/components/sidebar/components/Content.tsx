@@ -71,22 +71,24 @@ function SidebarContent(props: SidebarContent) {
       </Stack>
 
       <Box mt="60px" width={'100%'} display={'flex'} justifyContent={'center'}>
-        <SidebarCard />
+        {/* <SidebarCard /> */}
       </Box>
-      <APIModal setApiKey={setApiKey} sidebar={true} />
+      {/* <APIModal setApiKey={setApiKey} sidebar={true} //> */}
       <Flex
         mt="8px"
-        justifyContent="center"
+        justifyContent="space-between"
         alignItems="center"
         boxShadow={shadowPillBar}
         borderRadius="30px"
         p="14px"
       >
+        <Flex  alignItems="center">
         <NextAvatar h="34px" w="34px" src={avatar4} me="10px" />
         <Text color={textColor} fontSize="xs" fontWeight="600" me="10px">
-          Adela Parkson
+          Junaid Khan
         </Text>
-        <Menu>
+        </Flex>
+        {/* <Menu>
           <MenuButton
             as={Button}
             variant="transparent"
@@ -259,7 +261,7 @@ function SidebarContent(props: SidebarContent) {
               </Flex>
             </Box>
           </MenuList>
-        </Menu>
+        </Menu> */}
         <Button
           variant="transparent"
           border="1px solid"
