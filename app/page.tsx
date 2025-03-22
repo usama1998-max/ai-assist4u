@@ -1,29 +1,20 @@
 'use client';
 /*eslint-disable*/
 
-import Link from '@/components/link/Link';
 import MessageBoxChat from '@/components/MessageBox';
 import { ChatBody, OpenAIModel } from '@/types/types';
 import {
-  Accordion,
-  AccordionButton,
-  AccordionIcon,
-  AccordionItem,
-  AccordionPanel,
-  Box,
   Button,
   Flex,
   Icon,
-  Img,
   Input,
   Text,
-  useColorModeValue,
+  useColorModeValue
 } from '@chakra-ui/react';
-import { useEffect, useState } from 'react';
-import { MdAutoAwesome, MdBolt, MdEdit, MdPerson } from 'react-icons/md';
-import Bg from '../public/img/chat/bg-image.png';
+import { useState } from 'react';
+import { MdAutoAwesome, MdEdit, MdPerson } from 'react-icons/md';
 
-export default function Chat(props: { apiKeyApp: string }) {
+export default function Chat() {
   // Input States
   const [inputOnSubmit, setInputOnSubmit] = useState<string>('');
   const [inputCode, setInputCode] = useState<string>('');
@@ -38,18 +29,9 @@ export default function Chat(props: { apiKeyApp: string }) {
   // const [apiKey, setApiKey] = useState<string>(apiKeyApp);
   const borderColor = useColorModeValue('gray.200', 'whiteAlpha.200');
   const inputColor = useColorModeValue('navy.700', 'white');
-  const iconColor = useColorModeValue('brand.500', 'white');
-  const bgIcon = useColorModeValue(
-    'linear-gradient(180deg, #FBFBFF 0%, #CACAFF 100%)',
-    'whiteAlpha.200',
-  );
-  const brandColor = useColorModeValue('brand.500', 'white');
-  const buttonBg = useColorModeValue('white', 'whiteAlpha.100');
+  const brandColor = useColorModeValue('brand.500', 'white'); 
   const gray = useColorModeValue('gray.500', 'white');
-  const buttonShadow = useColorModeValue(
-    '14px 27px 45px rgba(112, 144, 176, 0.2)',
-    'none',
-  );
+ 
   const textColor = useColorModeValue('navy.700', 'white');
   const placeholderColor = useColorModeValue(
     { color: 'gray.500' },
